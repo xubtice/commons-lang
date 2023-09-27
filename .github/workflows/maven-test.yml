@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: Java CI
+name: mvn
 
 on: [push, pull_request]
 
@@ -27,8 +27,8 @@ jobs:
     continue-on-error: ${{ matrix.experimental }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        java: [ 8, 11, 17 ]
+        os: [ubuntu-latest]
+        java: [ 17 ]
         experimental: [false]
 #        include:
 #          - java: 21-ea
